@@ -55,3 +55,5 @@ jobs:
     - name: Deploy
       if: ${{ steps.tag.conclusion == 'skipped' }}
       run: ./build/maven-run.sh
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
