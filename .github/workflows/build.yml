@@ -54,4 +54,4 @@ jobs:
 
     - name: Deploy
       if: ${{ steps.tag.conclusion == 'skipped' }}
-      run: ./build/maven-deploy.sh
+      run: ./build/maven-run.sh
