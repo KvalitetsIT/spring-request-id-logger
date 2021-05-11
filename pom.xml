@@ -23,7 +23,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/kvalitetsit/spring-request-id-logger</url>
+			<url>https://maven.pkg.github.com/KvalitetsIT/spring-request-id-logger</url>
 		</repository>
 	</distributionManagement>
 
