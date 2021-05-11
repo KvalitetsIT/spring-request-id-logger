@@ -54,6 +54,4 @@ jobs:
 
     - name: Deploy
       if: ${{ steps.tag.conclusion == 'skipped' }}
-      run: |
-        sudo chown -R runner $HOME/.m2
-        mvn --batch-mode deploy
+      run: ./build/maven-deploy.sh
