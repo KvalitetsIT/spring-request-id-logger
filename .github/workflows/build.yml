@@ -54,4 +54,6 @@ jobs:
 
     - name: Deploy
       if: ${{ steps.tag.conclusion == 'skipped' }}
-      run: mvn --batch-mode deploy
+      run: |
+        chown -R runner $HOME/.m2
+        mvn --batch-mode deploy
