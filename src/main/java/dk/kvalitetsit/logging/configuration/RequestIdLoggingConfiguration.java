@@ -19,8 +19,8 @@ public class RequestIdLoggingConfiguration implements WebMvcConfigurer {
     private LoggingInterceptor loggingInterceptor;
 
     @Bean
-    public LoggingInterceptor loggingInterceptor(@Value("${correlation_id:correlation-id}") String correlationIdHeaderName, RequestIdGenerator requestIdGenerator) {
-        return new LoggingInterceptor(correlationIdHeaderName, requestIdGenerator);
+    public LoggingInterceptor loggingInterceptor(RequestIdGenerator requestIdGenerator) {
+        return new LoggingInterceptor(requestIdGenerator);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class RequestIdLoggingConfiguration implements WebMvcConfigurer {
 
     @Bean
     @RequestScope
-    public RequestIdGenerator requestIdGenerator(HttpServletRequest request, @Value("${correlation_id:correlation-id}") String correlationIdHeaderName) {
+    public RequestIdGenerator requestIdGenerator(HttpServletRequest request, @Value("${correlation_id:X-REQUEST-ID}") String correlationIdHeaderName) {
         return new RequestIdGeneratorImpl(correlationIdHeaderName, request);
     }
 }
