@@ -1,4 +1,4 @@
-![Build Status](https://github.com/KvalitetsIT/sprint-request-id-logger/workflows/Build%20And%20Test/badge.svg) ![Test Coverage](.github/badges/jacoco.svg)
+[![Build And Test](https://github.com/KvalitetsIT/spring-request-id-logger/actions/workflows/build.yml/badge.svg)](https://github.com/KvalitetsIT/spring-request-id-logger/actions/workflows/build.yml) ![Test Coverage](.github/badges/jacoco.svg)
 # spring-request-id-logger
 Simple library to add Spring interceptor that ensures that a correlation ID is put in the MDC logger context.
 The correlation id is taken from an HTTP header.
