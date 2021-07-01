@@ -15,7 +15,7 @@
 	</properties>
 
 	<scm>
-		<connection>git@github.com:KvalitetsIT/spring-request-id-logger.git</connection>
+		<connection>scm:git:git@github.com:KvalitetsIT/spring-request-id-logger.git</connection>
 		<tag>HEAD</tag>
 	</scm>
 
