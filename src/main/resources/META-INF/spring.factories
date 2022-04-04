@@ -1,2 +1,1 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=dk.kvalitetsit.logging.configuration.RequestIdLoggingConfiguration
-s
