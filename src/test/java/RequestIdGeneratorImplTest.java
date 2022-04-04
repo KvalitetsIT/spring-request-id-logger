@@ -1,21 +1,21 @@
-
 import dk.kvalitetsit.logging.RequestIdGeneratorImpl;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 
 public class RequestIdGeneratorImplTest {
     private final String HEADER_NAME = "header_name";
     private RequestIdGeneratorImpl requestIdGenerator;
     private HttpServletRequest httpServletRequest;
 
-    @Before
+    @BeforeEach
     public void setup() {
         httpServletRequest = Mockito.mock(HttpServletRequest.class);
         requestIdGenerator = new RequestIdGeneratorImpl(HEADER_NAME, httpServletRequest);
@@ -39,6 +39,7 @@ public class RequestIdGeneratorImplTest {
         UUID.fromString(result);
     }
 
+    @Test
     public void generateSameRequestId() {
         var result = requestIdGenerator.getOrGenerateRequestId();
         assertNotNull(result);
