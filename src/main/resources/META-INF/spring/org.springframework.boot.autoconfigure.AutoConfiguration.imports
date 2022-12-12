@@ -1,0 +1,2 @@
+dk.kvalitetsit.logging.configuration.RequestIdLoggingConfiguration
+dk.kvalitetsit.logging.configuration.RequestIdLoggingWebMvcConfiguration

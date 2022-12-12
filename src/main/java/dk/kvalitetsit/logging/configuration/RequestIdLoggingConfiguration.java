@@ -3,14 +3,13 @@ package dk.kvalitetsit.logging.configuration;
 import dk.kvalitetsit.logging.LoggingInterceptor;
 import dk.kvalitetsit.logging.RequestIdGenerator;
 import dk.kvalitetsit.logging.RequestIdGeneratorImpl;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.RequestScope;
 
-import javax.servlet.http.HttpServletRequest;
-
-@Configuration
+@AutoConfiguration
 public class RequestIdLoggingConfiguration {
     @Bean
     public LoggingInterceptor loggingInterceptor(RequestIdGenerator requestIdGenerator) {
