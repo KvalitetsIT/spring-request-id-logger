@@ -23,7 +23,7 @@ public class RequestIdGeneratorImpl implements RequestIdGenerator {
     public String getOrGenerateRequestId() {
         if(cachedCorrelationId == null) {
             String correlationId = httpServletRequest.getHeader(headerName);
-            logger.debug("Extracted header: " + headerName + " with value:" + correlationId);
+            logger.debug("Extracted header: {} with value:{}", headerName, correlationId);
             if(correlationId == null) {
                 correlationId = UUID.randomUUID().toString();
                 logger.debug("Generated new correlation id as it was not found in header: {}.", correlationId);
