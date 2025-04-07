@@ -32,7 +32,7 @@
 
 
 	<properties>
-		<jacoco.version>0.8.12</jacoco.version>
+		<jacoco.version>0.8.13</jacoco.version>
 	</properties>
 
 	<scm>
